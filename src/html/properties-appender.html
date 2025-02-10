@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="GeoJSON Formatter">
+    <meta name="keywords" content="files, replace, format">
+    <meta name="author" content="Andrea Arias">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properties Appender</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <script type="text/javascript" src="../js/files.js"></script>
+</head>
+
+<body>
+    <h1>Properties Appender</h1>
+
+    <div>
+        <div>
+            <span>File 1</span>
+            <input type="file" id="file-1" accept=".csv, .json">
+        </div>
+        <br>
+        <div>
+            <span>File 2</span>
+            <input type="file" id="file-2" accept=".csv, .json">
+        </div>
+    </div>
+
+    <br>
+
+    <div>
+        <div>
+            <span>Properties to append:</span>
+        </div>
+        <br>
+        <textarea id="properties" rows="6" cols="45" placeholder="property:new-property, property:new-property..."></textarea>
+        <!-- newPropFile1:proFile2:relPropFile1:relPropFile2 -->
+        <!-- municipalityId:id:municipalityName:name, departmentId:departmentId:departmentName:departmentName -->
+    </div>
+
+    <br>
+
+    <div>
+        <div>
+            <span>File type:</span>
+        </div>
+        <div>
+            <input type="radio" id="file-type-csv" name="file-type" value="csv" checked>
+            <label for="file-type-csv">csv</label>
+        </div>
+        <div>
+            <input type="radio" id="file-type-json" name="file-type" value="json">
+            <label for=" file-type-json">json</label>
+        </div>
+    </div>
+
+    <br>
+
+    <div title="Result file name without extension">
+        <label for="result-file-name">Result file name:</label>
+        <input type="text" id="result-file-name" placeholder="file">
+    </div>
+
+    <br>
+
+    <button type="button" onclick="appendProperties()" style="background: black; color: white;">Merge files</button>
+
+</body>
+
+</html>

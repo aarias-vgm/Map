@@ -1,0 +1,199 @@
+/* @import url("https://use.fontawesome.com/releases/v6.6.0/css/all.css"); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --selection-back-color: #000000;
+    --selection-font-color: #fffF00;
+    --scrollbar-thumb-color: #000000;
+    --scrollbar-track-color: #fffF00;
+}
+
+* {
+    box-sizing: border-box !important;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    font-family: "Montserrat", serif !important;
+    font-weight: 500;
+    font-style: normal;
+    overflow: hidden;
+}
+
+p {
+    font-size: 0.8rem;
+}
+
+small {
+    font-size: 0.65rem;
+}
+
+@media (min-width: 1200px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+::selection {
+    background-color: var(--selection-back-color);
+    color: var(--selection-font-color);
+}
+
+#navbar {
+    width: 25%;
+    height: 100%;
+}
+
+#map-container {
+    position: relative;
+    /* width: 75%; */
+    width: 100%;
+    height: 100%;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.visible {
+    opacity: 0.9;
+    visibility: visible;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.vertical-slider {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.vertical-slider::-webkit-scrollbar {
+    width: 3px;
+    margin-left: 10px;
+}
+
+.vertical-slider::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb-color);
+    border-radius: 5px;
+}
+
+.vertical-slider::-webkit-scrollbar-track {
+    background: var(--scrollbar-track-color);
+    border-radius: 5px;
+}
+
+.point-icon {
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.hospital .point-icon {
+    transition: all 0.25s ease-in-out;
+}
+
+.hospital .point-icon:hover {
+    font-size: larger;
+    color: #fff4f6 !important;
+}
+
+.key .point-icon {
+    transition: transform 0.25s ease-in-out;
+}
+
+.key .point-icon:hover {
+    right: 0;
+    bottom: 0;
+    transform: scale(1.25);
+    color: #f0fbff !important;
+}
+
+.tooltip {
+    display: block;
+    transform: translate(-50%);
+    transition: all 0.25s ease-in-out;
+}
+
+.tooltip,
+.tooltip * {
+    user-select: none;
+    pointer-events: none;
+}
+
+#name-tooltip {
+    max-width: 200px;
+    line-height: 1.25;
+    text-align: center;
+    cursor: pointer;
+}
+
+#info-tooltip {
+    line-height: 1.1;
+    text-align: left;
+}
+
+#info-tooltip b,
+#info-tooltip p,
+#info-tooltip em,
+#info-tooltip h1,
+#info-tooltip h2,
+#info-tooltip h3,
+#info-tooltip h4,
+#info-tooltip h5,
+#info-tooltip h6,
+#info-tooltip span,
+#info-tooltip small,
+#info-tooltip .vertical-slider {
+    user-select: text;
+    pointer-events: auto;
+}
+
+#point-tooltip {
+    line-height: 1;
+    text-align: left;
+    pointer-events: all;
+}
+
+#point-tooltip button {
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+#point-tooltip button:focus {
+    animation: flash-animation 0.25s ease-out;
+}
+
+@keyframes flash-animation {
+    0% {
+        filter: brightness(2);
+    }
+    
+    100% {
+        filter: brightness(1);
+    }
+}

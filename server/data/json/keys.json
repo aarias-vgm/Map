@@ -1,0 +1,93 @@
+[
+    {
+        "name": "KAM Barranquilla",
+        "municipalityId": "05001",
+        "address": "Cra. 51 #44-33",
+        "lat": 10.98152051,
+        "lng": -74.827715439
+    },
+    {
+        "name": "KAM Bucaramanga",
+        "municipalityId": "68001",
+        "address": "Cra. 51 #44-33",
+        "lat": 7.155833544,
+        "lng": -73.111569971
+    },
+    {
+        "name": "KAM Cali",
+        "municipalityId": "76001",
+        "address": "Cra. 51 #44-33",
+        "lat": 3.399043723,
+        "lng": -76.576492589
+    },
+    {
+        "municipalityId": "13001",
+        "name": "KAM Cartagena",
+        "address": "Cra. 51 #44-33",
+        "lat": 10.463433617,
+        "lng": -75.45889915
+    },
+    {
+        "municipalityId": "54001",
+        "name": "KAM Cúcuta",
+        "address": "Cra. 51 #44-33",
+        "lat": 8.112041811,
+        "lng": -72.488626408
+    },
+    {
+        "municipalityId": "05001",
+        "name": "KAM Medellín",
+        "address": "Cra. 51 #44-33",
+        "lat": 6.257590259,
+        "lng": -75.611031065
+    },
+    {
+        "municipalityId": "23001",
+        "name": "KAM Montería",
+        "address": "Cra. 51 #44-33",
+        "lat": 8.584698016,
+        "lng": -75.950550788
+    },
+    {
+        "municipalityId": "41001",
+        "name": "KAM Neiva",
+        "address": "Cra. 51 #44-33",
+        "lat": 2.993360046,
+        "lng": -75.272362322
+    },
+    {
+        "municipalityId": "52001",
+        "name": "KAM Pasto",
+        "address": "Cra. 51 #44-33",
+        "lat": 1.083605497,
+        "lng": -77.206100743
+    },
+    {
+        "municipalityId": "66001",
+        "name": "KAM Pereira",
+        "address": "Cra. 51 #44-33",
+        "lat": 4.803662773,
+        "lng": -75.795790934
+    },
+    {
+        "municipalityId": "70001",
+        "name": "KAM Sincelejo",
+        "address": "Cra. 51 #44-33",
+        "lat": 9.316673928,
+        "lng": -75.431749665
+    },
+    {
+        "municipalityId": "11001",
+        "name": "KAM Usaquén",
+        "address": "Cra. 51 #44-33",
+        "lat": 4.72319,
+        "lng": -74.02468
+    },
+    {
+        "municipalityId": "20001",
+        "name": "KAM Valledupar",
+        "address": "Cra. 51 #44-33",
+        "lat": 10.218902768,
+        "lng": -73.457847638
+    }
+]

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="GeoJSON Formatter">
+    <meta name="keywords" content="geojson, format, locations">
+    <meta name="author" content="Andrea Arias">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoJSON Formatter</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <script type="text/javascript" src="../js/files.js"></script>
+</head>
+
+<body>
+    <h1 id="title">GeoJSON Formatter</h1>
+
+    <p>
+        This tool will keep the main properties from file 1 and add the properties from file 2 in order to create a new
+        file (the common property must be repeated on the properties boxes). If the political division is "Secondary",
+        each record will contain a parent ID.
+    </p>
+
+    <h2>Political division</h2>
+
+    <div style="display: flex; align-items: start;">
+        <div title="Primary: records without parent key">
+            <input type="radio" id="political-type-1" name="political-type" value="1" checked>
+            <label for="political-type-1">Primary</label>
+        </div>
+        <div style="width: 20px;"></div>
+        <div title="Secondary: records with parent key">
+            <input type="radio" id="political-type-2" name="political-type" value="2">
+            <label for="political-type-2">Secondary (with parent key)</label>
+        </div>
+    </div>
+
+    <h2>Files</h2>
+
+    <div style="display: flex; align-items: start;">
+        <div>
+            <div>
+                <strong>File 1:</strong>
+                <p>Properties:</p>
+                <textarea id="file-1-properties" rows="3" cols="50"
+                    placeholder="IDENTIFIER: id, FIRSTNAME:name, ..."></textarea>
+            </div>
+            <br>
+            <!-- dpto_ccdgo:id -->
+            <!-- mpio_cdpmp:id, mpio_cnmbr:name, mpio_tipo:type, dpto_ccdgo:departmentId, dpto_cnmbr:departmentName -->
+            <input type="file" id="file-1" accept=".geojson">
+        </div>
+        <div style="width: 50px;"></div>
+        <div title="Optional file; only the specified properties of this file will be keep it">
+            <div>
+                <strong>File 2:</strong>
+                <p>Properties:</p>
+                <textarea id="file-2-properties" rows="3" cols="40"
+                    placeholder="DOCUMENTID: id, BIRTHDAY:year, ..."></textarea>
+                <!-- COD_DPTO:id, NOM_DPTO:name, AREA:area, POBTOT2025:population2025, POBTOT2035:population2035, DENTOT2025:density2025, DENTOT2035:density2035 -->
+                <!-- COD_MPIO:id, AREA:area, POBTOT2025:population2025, POBTOT2035:population2035, DENTOT2025:density2025, DENTOT2035:density2035, COD_DPTO:departmentId -->
+            </div>
+            <br>
+            <input type="file" id="file-2" accept=".geojson" />
+        </div>
+    </div>
+
+    <h3>Keys</h3>
+
+    <div style="display: flex; align-items: start;">
+        <div>
+            <div title="Key with formatted name for records">
+                <span>Key:</span>
+                <input type="text" id="id-key" placeholder="id">
+            </div>
+        </div>
+        <div style="width: 40px;"></div>
+        <div>
+            <div title="Parent key with formatted name">
+                <span>Parent key:</span>
+                <input type="text" id="parent-id-key" placeholder="parentId">
+            </div>
+            <br>
+            <div>
+                <span>Parent name key:</span>
+                <input type="text" id="parent-name-key" placeholder="parentName">
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <button type="button" onclick="createGeoJSON()" style="background: black; color: white;">Format GeoJSON</button>
+
+</body>
+
+</html>

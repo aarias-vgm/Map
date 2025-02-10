@@ -1,0 +1,85 @@
+    // const locations = []
+
+    // for (const location of locations){
+
+    // }
+
+    // map.data.addGeoJson(await loadJson(`DEPA_MPIO_20_35_GEOM1_GEOMETRIA.geojson`))
+
+    // const politicalDivision = await loadJson("politicalDivision.json")
+
+    // const departmentNames = Object.keys(politicalDivision)
+
+    // for (const departmentName of departmentNames) {
+    //     map.data.addGeoJson(await loadJson(`departments/${departmentName}`))
+    // }
+
+    // map.data.forEach((feature) => {
+    //     feature.setProperty("visits", DEPARTMENTVISITS[feature.getProperty("dpto_ccdgo")])
+    // });
+
+    // map.data.setStyle((feature) => {
+    //     return {
+    //         fillColor: feature.getProperty("visits"),
+    //         fillOpacity: 1,
+    //         strokeColor: "white",
+    //         strokeWeight: 2,
+    //         strokeOpacity: 1.0
+    //     };
+    // });
+
+    // map.data.addListener("click", (event) => {
+    //     map.data.forEach((feature) => {
+    //         feature.setProperty("isSelected", false)
+    //     });
+    //     lastFeature = event.feature
+    //     lastFeature.setProperty("isSelected", true);
+    // });
+
+    // let tooltip = document.getElementById('tooltip');
+
+    // map.data.addListener("mouseover", (event) => {
+    //     map.data.overrideStyle(event.feature, { fillColor: '#0f3462' });
+
+    //     const feature = event.feature
+
+    //     let propertiesHTML = '';
+
+    //     feature.properties.forEach((property) => {
+    //       const value = feature.getProperty(property);
+    //       propertiesHTML += `<b>${property}:</b> ${value}<br>`;
+    //     });
+
+    //       tooltip.innerHTML = propertiesHTML;
+    //       tooltip.style.display = 'block';
+    //       tooltip.style.left = event.domEvent.clientX + 'px';
+    //       tooltip.style.top = event.domEvent.clientY + 'px';
+
+    // });
+
+    // map.data.addListener("mouseout", (event) => {
+    //     map.data.revertStyle();
+
+    //     tooltip.style.display = 'none';
+    // });
+
+
+    // map.data.addListener("mouseover", (event) => {
+    //     const name = event.feature.getProperty("name"); // Propiedad con el nombre
+    //     if (name) {
+    //       tooltip.innerHTML = name;
+    //       tooltip.style.display = "block";
+    //     }
+    //   });
+
+    //   map.data.addListener("mousemove", (event) => {
+    //     tooltip.style.left = event.domEvent.pageX + 10 + "px"; // Posición en X
+    //     tooltip.style.top = event.domEvent.pageY + 10 + "px";  // Posición en Y
+    //   });
+
+    //   map.data.addListener("mouseout", () => {
+    //     tooltip.style.display = "none"; // Ocultar el tooltip
+    //   });
+
+
+    // loadPlaces(map)
